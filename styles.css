@@ -795,7 +795,7 @@ img {
 .carousel-track {
   display: inline-block; /* Allows items to sit side-by-side */
   animation: slide 45s linear infinite; /* Adjust duration and timing */
-  background-color: #dcbf00;
+  background-color: #ffe100;
   padding: 1.5rem;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -1731,7 +1731,7 @@ animation-duration: 7s;
 
 /* Colors */
 .pink {
-    background: #957d00;
+    background: #b8a300;
     color: white;
 }
 
