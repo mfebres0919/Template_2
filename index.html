@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bungee+Shade&family=Bungee+Tint&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Instrument+Serif:ital@0;1&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..95;1,45;1,45&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=BBH+Sans+Bartle&family=BBH+Sans+Bogle&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bungee+Shade&family=Bungee+Tint&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Instrument+Serif:ital@0;1&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lobster&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="index.html" class="cs-logo" aria-label="back to home">
+            <img src="images/logos/main-logo.svg" alt="Anjelic Haircare logo"  decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="index.html" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#about" class="cs-li-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#clients" class="cs-li-link">
+                            Clients
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#services" class="cs-li-link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#policies" class="cs-li-link">
+                            Policies
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#contact" class="cs-li-link">
+                            Contact
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="cs-contact-group">
+            <a href="tel:+84 1985 33 999" class="cs-phone">
+                <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                +84 1985 33 999
+            </a>
+            <div class="cs-social">
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h3 class="reveal reveal-text"><span class="font-1">WELCOME TO</span></h3>
+
+        <div class="hero-logo reveal reveal-logo">
+            <img src="./images/logos/hero-logo.svg" alt="image of hair" height="350" width="350">
+        </div>
+
+        <h3 class="reveal reveal-text">LOCATED IN LOS ANGELES, CA</h3>
+
+        <a class="btn-1 reveal reveal-btn" href="#services">BOOK NOW</a>
+    </div>
+
+    <div class="hero-img reveal reveal-img">
+        <img class="melody-img" src="images/melody-img.svg" alt="Image of Melody">
+    </div>
+
+    <!-- STAR BACKGROUND -->
+    <div class="star-field">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="shooting-star shooting-star-1"></span>
+        <span class="shooting-star shooting-star-2"></span>
+    </div>
+</div>
+
+
+
+<!----------------------------->
+<!----------CAROUSEL #1----------->
+<!----------------------------->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+  </div>
+    <!-- Duplicate items for a seamless loop -->
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+  </div>
+</div>
+
+
+
+<!-- ABOUT ME SECTION -->
+<section id="about" class="about-me-section">
+    <!-- STAR BACKGROUND (ABOUT SECTION) -->
+    <div class="star-field-2">
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+        <span class="star-2"></span>
+    </div>
+
+    <!-- ABOUT CONTENT CONTAINER -->
+    <div class="about-content">
+
+        <div class="img-wrapper">
+            <!-- ITEMS INSIDE ABOUT CONTENT CONTAINER -->
+            <div class="melody-2-img reveal reveal-img">
+                <img src="images/melody-img-2.svg" alt="">
+            </div>
+        </div>
+        <!-- DIV FOR ABOUT PARAGRAPH -->
+        <div class="about-paragraph reveal reveal-text">
+            <div class="about-logo-2 reveal reveal-logo">
+                <img src="images/logos/about-me-logo.svg" alt="">
+            </div>
+            <p class="reveal reveal-text">
+                Hi, I’m Melody, a certified hair stylist with a passion for enhancing and providing hair care.
+            </p>
+
+            <p class="reveal reveal-text">
+                I use the latest techniques to create stunning results. I'm here to help you feel confident and beautiful every day!
+            </p>
+        </div> 
+    </div>
+
+</section>
+
+
+
+<!-- CLIENT SECTION -->
+<section id="clients" class="my-work-section">
+    <!-- STAR BACKGROUND -->
+    <div class="star-field">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="shooting-star shooting-star-1"></span>
+        <span class="shooting-star shooting-star-2"></span>
+    </div>
+  <div class="work-logo reveal reveal-logo">
+    <img src="images/logos/my-work-logo.svg" alt="My Work">
+  </div>
+
+  <div class="mywork-carousel reveal reveal-container">
+    <div class="mywork-track">
+      <!-- FIRST SET -->
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+
+      <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client1.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client2.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client3.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client4.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client5.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client6.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client7.png" alt="">
+      <img class="mywork-item" src="images/client-imgs/client8.png" alt="">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services-accordion">
+    <!-- <div class="bubble-bg" aria-hidden="true"></div> -->
+    <div class="accordion-logo reveal reveal-logo">
+        <img src="images/logos/services-logo.svg" alt="">
+    </div>
+    <!-- STAR BACKGROUND -->
+    <div class="star-field">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="shooting-star"></span>
+        <span class="shooting-star shooting-star-2"></span>
+    </div>
+
+    <!-- ACCORDION CONTENT -->
+    <div class="accordion-content reveal reveal-container">
+
+
+       <!-- FIRST SERVICE ITEM -->
+       <div class="service-item">
+            <button class="service-header">
+               <h2>Starter Locs</h2>
+               <span class="chevron">+</span>
+            </button>
+            
+            <!-- SUBSERVICE WRAPPER -->
+            <div class="service-content">
+
+                <!-- SUBSERVICE #1 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Starter Locs</h4>
+                        <p>2 hours</p>
+                        <p>$180</p>
+                        <p class="pink-message">Please come with hair washed and blow-dried</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+
+                <!-- SUBSERVICE #2 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Starter Locs + Style</h4>
+                        <p>2 hours</p>
+                        <p>$195</p>
+                        <p class="pink-message">Please come with hair washed and blow-dried</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+            </div>
+        </div>
+
+
+       <!-- SECOND SERVICE ITEM -->
+       <div class="service-item">
+            <button class="service-header">
+               <h2>Retwist & Maintenance</h2>
+               <span class="chevron">+</span>
+            </button>
+            
+            <!-- SUBSERVICE WRAPPER -->
+            <div class="service-content">
+
+                <!-- SUBSERVICE #1 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Retwist</h4>
+                        <p>2 hours</p>
+                        <p>$95</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+                <!-- SUBSERVICE #2 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Retwist + Style</h4>
+                        <p>2 hours</p>
+                        <p>$110</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+                <!-- SUBSERVICE #3 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Wash + Retwist + Style</h4>
+                        <p>2 hours</p>
+                        <p>$125</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div> 
+                <!-- SUBSERVICE #4 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Free Form Retwist</h4>
+                        <p>2 hours</p>
+                        <p>$145</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>  
+                <!-- SUBSERVICE #5 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Free Form Retwist + Style</h4>
+                        <p>2 hours</p>
+                        <p>$160</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>                 
+            </div>
+        </div>        
+
+       <!-- THIRD SERVICE ITEM -->
+       <div class="service-item">
+            <button class="service-header">
+               <h2>Sisterlocs</h2>
+               <span class="chevron">+</span>
+            </button>
+            
+            <!-- SUBSERVICE WRAPPER -->
+            <div class="service-content">
+
+                <!-- SUBSERVICE #1 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Sisterlocs Install</h4>
+                        <p>5 hours + 40 minutes</p>
+                        <p>$850.00</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+
+                <!-- SUBSERVICE #2 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>Sisterlocs Maintenance</h4>
+                        <p>3 hours</p>
+                        <p>$325.00</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+            </div>
+        </div>
+
+       <!-- FOURTH SERVICE ITEM -->
+       <div class="service-item">
+            <button class="service-header">
+               <h2>Extensions & Enhancements</h2>
+               <span class="chevron">+</span>
+            </button>
+            
+            <!-- SUBSERVICE WRAPPER -->
+            <div class="service-content">
+
+                <!-- SUBSERVICE #1 -->
+                <div class="sub-service">
+                    <div class="sub-info">
+                        <h4>2-Strand Extensions (Marley Twist Hair)</h4>
+                        <p>3 hours</p>
+                        <p>$250.00</p>
+                        <p class="pink-message">This service is to give a longer effect to shorter locs.</p><br>
+                        <p class="pink-message">You must have 100 locs or fewer to book this service</p>
+                    </div>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!----------------------------->
+<!----------CAROUSEL #1----------->
+<!----------------------------->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+  </div>
+    <!-- Duplicate items for a seamless loop -->
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">POLICIES</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+  </div>
+</div>
+
+
+
+<!-- BOOKING POLICIES SECTION -->
+<section id="policies" class="booking-section">      
+       <!-- STAR BACKGROUND (BOOKING) -->
+    <div class="star-field-booking">
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+        <span class="star-booking"></span>
+    </div>
+    <div class="booking-content">
+
+        <div class="booking-logo reveal reveal-logo">
+            <img src="./images/logos/booking-logo.svg" alt="Booking Logo">
+        </div>
+
+        <!-- CARDS SECTION -->
+        <div class="booking-cards reveal reveal-container">
+
+            <div class="card-1 reveal reveal-card">
+                <img src="./images/icons/appointment-icon.svg" alt="Appointments Icon">
+                <h1>APPOINTMENTS</h1>
+                <p>All appointments must be booked in advance through the booking system. Please select the correct service when booking to ensure enough time is reserved. If you are unsure which service to choose, feel free to reach out before booking.</p>
+            </div>
+
+            <div class="card-1 reveal reveal-card">
+                <img src="./images/icons/deposit-icon.svg" alt="Deposit Icon">
+                <h1>DEPOSIT</h1>
+                <p>A non-refundable deposit is required to secure your appointment. The deposit goes toward your total service price and confirms your time slot. Appointments are not guaranteed without a deposit.</p>
+            </div>
+
+            <div class="card-1 reveal reveal-card">
+                <img src="./images/icons/late-icon.svg" alt="Late Arrivals Icon">
+                <h1>LATE ARRIVALS</h1>
+                <p>Please arrive on time for your appointment. Clients arriving more than 10–15 minutes late may need to reschedule or have their service adjusted to avoid impacting other clients. Late arrivals may still be charged the full service price.</p>
+            </div>
+
+            <div class="card-1 reveal reveal-card">
+                <img src="./images/icons/cancellations-icon.svg" alt="Cancellation Icon">
+                <h1>CANCELLATIONS</h1>
+                <p>Cancellations or reschedules must be made at least 24 hours in advance. Failure to do so may result in the loss of your deposit. No-shows will be charged accordingly and may require full payment before rebooking.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================
+ =======CONTACT SECTION====== -->
+<section id="contact" class="hours-section">
+        <!-- STAR BACKGROUND (HOURS) -->
+    <div class="star-field-hours">
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+        <span class="star-hours"></span>
+    </div>
+    <!-- CONTAINER 1 -->
+    <div class="hours-container reveal reveal-left">
+        <img src="images/logos/hours-logo.svg" class="hours-title-img" alt="Business Hours">
+
+        <div class="hours-box reveal reveal-box">
+            <p class="days-1"><strong>TUESDAY – SATURDAY</strong><br>9:00 AM – 9:00 PM</p>
+            <p class="days-1"><strong>CLOSED DAYS</strong><br>SUNDAY – MONDAY</p>
+            <p class="address">123 St. Name, City</p>
+        </div>
+    </div>
+
+    <!-- CONTAINER 2 -->
+    <div class="hours-container container-2 reveal reveal-right">
+        <img src="images/logos/contact-logo.svg" class="hours-title-img" alt="Contact Info">
+
+        <div class="hours-box contact-box reveal reveal-box">
+            <p class="days"><img src="./images/icons/phone-icon.svg" class="contact-icons" height="20px">(123) 456-7890</p>
+            <p class="days"><img src="./images/icons/email-icon.svg" class="contact-icons" height="20px">email@gmail.com</p>
+            <p class="days"><img src="./images/icons/insta-icon.svg" class="contact-icons" height="20px">@instagram_username</p>
+            <p class="days facebook"><img src="./images/icons/facebook-icon.svg" class="contact-icons" height="20px">@facebook_name</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- IMPORTANT MESSAGES SECTIOON -->
+<section class="messages-section">
+            <!-- STAR BACKGROUND (CTA 2) -->
+    <div class="star-field-cta2">
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="shooting-star"></span>
+        <span class="shooting-star shooting-star-2"></span>
+    </div>
+
+    <div class="bubble-bg" aria-hidden="true"></div>
+
+    <div class="announcement-logo reveal reveal-logo">
+        <img src="images/announcement-logo.svg" alt="">
+    </div>
+
+    <div class="prep-grid reveal reveal-container">
+        <div class="prep-card pink reveal reveal-card">Arrive 10 minutes early to settle in.</div>
+        <div class="prep-card black reveal reveal-card">Come with clean, dry hair.</div>
+
+        <div class="prep-card black reveal reveal-card">Avoid pre-conditioning treatments.</div>
+        <div class="prep-card pink reveal reveal-card">Bring inspiration photos.</div>
+
+        <div class="prep-card pink reveal reveal-card">Notify us at least 24 hours to reschedule.</div>
+        <div class="prep-card black reveal reveal-card">Relax during the appointment.</div>
+    </div>
+</section>
+
+
+
+
+<!----------------------------->
+<!----------CAROUSEL #1----------->
+<!----------------------------->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <!-- Duplicate items for a seamless loop -->
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">ABOUT ME</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+    <p class="carousel-item">BOOK NOW</p><img src="./logo/computer-icon.svg" alt="" height="20px">
+  </div>
+</div>
+
+
+
+<!-- CTA 2 SECTION -->
+<section class="cta-2-section">
+    <!-- STAR BACKGROUND (CTA 2) -->
+    <div class="star-field-cta2">
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+        <span class="star-cta2"></span>
+    </div>
+
+    <!-- BUBBLES (CTA 2) -->
+    <div class="bubble-bg-cta2" aria-hidden="true"></div>
+
+    <!-- BUBBLES (CTA 2) -->
+    <div class="bubble-bg-cta2" aria-hidden="true">
+        <span class="bubble-top-left bubble-tl-1"></span>
+        <span class="bubble-top-left bubble-tl-2"></span>
+    </div>
+
+
+
+    <!-- CTA 2 CONTENT -->
+    <div class="cta-2-content">
+
+        <div class="cta-img reveal reveal-img">
+            <img src="./images/selfie-img.svg" alt="">
+        </div>
+
+        <div class="cta-2-paragraph">
+
+            <h2 class="reveal reveal-text">
+                READY TO BOOK YOUR APPOINTMENT?
+            </h2>
+
+            <img class="tag-us-img reveal reveal-logo"
+                 src="./images/logos/selfie-logo.svg"
+                 alt="selfies logo">
+
+            <p class="reveal reveal-text">@yoursocialaccount</p>
+
+            <a class="btn-1 reveal reveal-btn" href="#services">BOOK NOW</a>
+
+        </div>
+    </div>
+</section>
+
+<!-- JS FILE -->
+<script src="main.js"></script> 
+
+</body>
+</html>
