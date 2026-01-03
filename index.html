@@ -989,6 +989,35 @@
     </div>
 </section>
 
+<!-- =========================
+     BOOKING MODAL
+========================= -->
+<div id="bookingModal" class="modal">
+  <div class="modal-wrapper">
+
+    <!-- MODAL BOX -->
+    <div class="modal-content">
+      <div class="iframe-container">
+        <iframe
+          id="bookingIframe"
+          src="https://app.acuityscheduling.com/schedule.php?owner=37942412&appointmentType=87353882&ref=embedded_csp"
+          allow="payment">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- EXIT BUTTON -->
+    <button class="exit-btn" onclick="closeBooking()">
+      EXIT BOOKING
+    </button>
+
+  </div>
+</div>
+
+<!-- ACUITY SCRIPT -->
+<script src="https://embed.acuityscheduling.com/js/embed.js"></script>
+
+
 <!-- JS FILE -->
 <script src="main.js"></script> 
 

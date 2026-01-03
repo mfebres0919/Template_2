@@ -196,12 +196,20 @@ document.querySelectorAll('.service-header').forEach(header => {
 });
 
 
-// MODAL TEST
+// OPEN MODAL (default service)
 function openBooking() {
   document.getElementById("bookingModal").style.display = "block";
   document.body.style.overflow = "hidden";
 }
 
+// OPEN MODAL WITH DIFFERENT SERVICE
+function openBookingWithLink(link) {
+  const iframe = document.getElementById("bookingIframe");
+  iframe.src = link;
+  openBooking();
+}
+
+// CLOSE MODAL
 function closeBooking() {
   document.getElementById("bookingModal").style.display = "none";
   document.body.style.overflow = "";

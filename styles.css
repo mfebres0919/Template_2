@@ -670,9 +670,9 @@ img {
     margin: 0 auto;
     background: radial-gradient(
     circle at top center,
-    rgba(255, 230, 120, 0.35) 0%,
-    rgba(180, 170, 60, 0.35) 35%,
-    rgba(90, 81, 20, 0.8) 70%,
+    rgba(255, 221, 0, 0.287) 0%,
+    rgba(255, 213, 0, 0.326) 35%,
+    rgba(90, 80, 20, 0.8) 70%,
     #0b0207 100%)
 }
 
@@ -2482,26 +2482,32 @@ animation-duration: 7s;
 
 
 
-/* MODAL TEST */
+/* =========================
+   BOOKING MODAL
+========================= */
+
+/* OVERLAY */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: none;
-  z-index: 9999;
+  align-items: center;
+  z-index: 99999;
 }
 
 /* CENTERING + STACK */
 .modal-wrapper {
-  width: auto;
-  height: auto;
+  width: 85%;
+  height: 100%;
+  margin: 1.2rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  gap: 16px; /* space between modal & exit button */
+  gap: 16px;
 }
+
 
 /* MODAL BOX */
 .modal-content {
@@ -2509,7 +2515,6 @@ animation-duration: 7s;
   width: 100%;
   max-width: 720px;
   max-height: 80vh;
-  /* border-radius: 18px; */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -2518,7 +2523,7 @@ animation-duration: 7s;
 /* SCROLL AREA */
 .iframe-container {
   flex: 1;
-  border: .8    px solid rgb(255, 0, 204);
+  border: 0.8px solid rgb(255, 230, 0); 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -2529,6 +2534,18 @@ animation-duration: 7s;
   min-height: 700px;
   border: none;
 }
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .modal-content {
+    max-height: 75vh;
+  }
+
+  .iframe-container iframe {
+    min-height: 900px;
+  }
+}
+
 
 /* EXIT BUTTON */
 .exit-btn {
